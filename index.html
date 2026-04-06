@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>京派建筑</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+        }
+        body {
+            background-color: #f5f0e6;
+            color: #5a3e2b;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        /* 头部区域 */
+        .header {
+            background-color: #e8d9c5;
+            padding: 40px 20px;
+            text-align: center;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .header h1 {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            letter-spacing: 8px;
+        }
+        .header .subtitle {
+            font-size: 14px;
+            margin-bottom: 15px;
+            opacity: 0.8;
+        }
+        .header .desc {
+            font-size: 14px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        /* 主图区域 */
+        .main-image {
+            width: 100%;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 20px;
+            background-color: #fff;
+            padding: 10px;
+        }
+        .main-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 4px;
+        }
+        /* 通用模块样式 */
+        .section {
+            background-color: #f8f0e3;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .section-title {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .section-title .en {
+            font-size: 13px;
+            opacity: 0.7;
+            font-weight: normal;
+        }
+        /* 带图片的标签组 */
+        .tag-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+        .tag-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background-color: #e8d9c5;
+            padding: 12px;
+            border-radius: 4px;
+            font-size: 15px;
+        }
+        .tag-item img {
+            width: 80px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: 4px;
+            flex-shrink: 0;
+        }
+        .tag-text {
+            flex: 1;
+            text-align: center;
+        }
+        /* 介绍文本 */
+        .intro-text {
+            font-size: 14px;
+            line-height: 1.8;
+        }
+        .intro-text .item {
+            margin: 8px 0;
+        }
+        /* 地图区域 */
+        .map-container {
+            width: 100%;
+            border-radius: 4px;
+            overflow: hidden;
+            background-color: #fff;
+            padding: 10px;
+        }
+        .map-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        /* 经典代表卡片 */
+        .represent-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+        .represent-card {
+            background: #fff;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+        .represent-card img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+        }
+        .represent-info {
+            padding: 12px;
+        }
+        .represent-name {
+            font-weight: bold;
+            margin-bottom: 6px;
+            font-size: 15px;
+        }
+        .represent-desc {
+            font-size: 13px;
+            color: #666;
+            line-height: 1.6;
+        }
+        /* 响应式适配 */
+        @media (max-width: 768px) {
+            .tag-grid,
+            .represent-grid {
+                grid-template-columns: 1fr;
+            }
+            .header h1 {
+                font-size: 28px;
+            }
+            .tag-item img {
+                width: 60px;
+                height: 45px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 头部 -->
+        <div class="header">
+            <h1>京派建筑</h1>
+            <div class="subtitle">古代六大派系建筑</div>
+            <div class="desc">
+                走进北京胡同，灰瓦四合院错落排布，让皇家规制融入市井烟火，古都风貌尽显东方礼制之美。
+            </div>
+        </div>
+
+        <!-- 主图 -->
+        <div class="main-image">
+            <img src="./京派建筑代表图.png" alt="北京四合院">
+        </div>
+
+        <!-- 新增：京派经典建筑代表 -->
+        <div class="section">
+            <div class="section-title">
+                经典建筑代表
+                <span class="en">Representative Buildings</span>
+            </div>
+            <div class="represent-grid">
+                <div class="represent-card">
+                    <img src="./故宫.jpg" alt="故宫">
+                    <div class="represent-info">
+                        <div class="represent-name">故宫（紫禁城）</div>
+                        <div class="represent-desc">明清皇家宫殿，中轴对称、黄瓦红墙，是中国古代宫廷建筑最高成就，规制严谨、气势恢宏。</div>
+                    </div>
+                </div>
+                <div class="represent-card">
+                    <img src="./天坛.png" alt="天坛">
+                    <div class="represent-info">
+                        <div class="represent-name">天坛</div>
+                        <div class="represent-desc">明清皇帝祭天祈谷之地，以圆形建筑、蓝色琉璃瓦为特色，体现“天圆地方”的传统宇宙观。</div>
+                    </div>
+                </div>
+                <div class="represent-card">
+                    <img src="./颐和园.jpg" alt="颐和园">
+                    <div class="represent-info">
+                        <div class="represent-name">颐和园</div>
+                        <div class="represent-desc">清代皇家园林，集山水、殿宇、廊亭于一体，兼具北方雄浑与江南雅致，是京派园林巅峰之作。</div>
+                    </div>
+                </div>
+                <div class="represent-card">
+                    <img src="./恭王府.png" alt="恭王府">
+                    <div class="represent-info">
+                        <div class="represent-name">恭王府</div>
+                        <div class="represent-desc">清代规模最大王府建筑，府邸与花园结合，布局考究、雕梁画栋，是京派贵族府邸典型代表。</div>
+                    </div>
+                </div>
+                <div class="represent-card">
+                    <img src="./四合院.jpg" alt="四合院">
+                    <div class="represent-info">
+                        <div class="represent-name">北京四合院</div>
+                        <div class="represent-desc">京派民居核心，四面围合、中轴对称，灰瓦青砖，体现传统家族礼制与北方居住智慧。</div>
+                    </div>
+                </div>
+                <div class="represent-card">
+                    <img src="./老北京胡同.png" alt="胡同">
+                    <div class="represent-info">
+                        <div class="represent-name">老北京胡同</div>
+                        <div class="represent-desc">由四合院串联而成的城市肌理，窄巷灰墙、门楼各异，承载老北京市井文化与生活风貌。</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 建筑图解（带图片） -->
+        <div class="section">
+            <div class="section-title">
+                建筑图解
+                <span class="en">Architectural Diagram</span>
+            </div>
+            <div class="tag-grid">
+                <div class="tag-item">
+                    <img src="./广亮大门.png" alt="广亮大门">
+                    <div class="tag-text">广亮大门</div>
+                </div>
+                <div class="tag-item">
+                    <img src="./垂花门.png" alt="垂花门">
+                    <div class="tag-text">垂花门</div>
+                </div>
+                <div class="tag-item">
+                    <img src="./影壁.png" alt="影壁">
+                    <div class="tag-text">影壁</div>
+                </div>
+                <div class="tag-item">
+                    <img src="./抄手游廊.png" alt="抄手游廊">
+                    <div class="tag-text">抄手游廊</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 建筑介绍 -->
+        <div class="section">
+            <div class="section-title">
+                建筑介绍
+                <span class="en">Building Profile</span>
+            </div>
+            <div class="intro-text">
+                <p>四合院是北京传统民居，属于合院式建筑，坐北朝南、中轴对称，是京派建筑经典代表。</p>
+                <p class="item">灰瓦：青灰筒瓦覆顶，适配北方气候，古朴庄重</p>
+                <p class="item">院落：方正围合，私密宜居，承载家族礼制</p>
+                <p class="item">色彩：以青灰、朱红、金黄为主，区分民居与皇家等级</p>
+                <p class="item">布局：前堂后寝、主次分明，严格遵循儒家礼制秩序</p>
+            </div>
+        </div>
+
+        <!-- 建筑结构（带图片） -->
+        <div class="section">
+            <div class="section-title">
+                建筑结构
+                <span class="en">Structure</span>
+            </div>
+            <div class="tag-grid">
+                <div class="tag-item">
+                    <img src="./一进院.jpg" alt="一进院">
+                    <div class="tag-text">一进院</div>
+                </div>
+                <div class="tag-item">
+                    <img src="./二进院.jpg" alt="二进院">
+                    <div class="tag-text">二进院</div>
+                </div>
+                <div class="tag-item">
+                    <img src="./三进院.jpg" alt="三进院">
+                    <div class="tag-text">三进院</div>
+                </div>
+                <div class="tag-item">
+                    <img src="./多进跨院.jpg" alt="多进跨院">
+                    <div class="tag-text">多进跨院</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 地理位置 -->
+        <div class="section">
+            <div class="section-title">
+                地理位置
+                <span class="en">Position</span>
+            </div>
+            <div class="map-container">
+                <img src="./地图.jpg" alt="京派建筑地理位置-北京区域图">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
